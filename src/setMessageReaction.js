@@ -17,13 +17,21 @@ module.exports = function(defaultFuncs, api, ctx) {
       case "\uD83D\uDE20": //:angry:
       case "\uD83D\uDC4D": //:thumbsup:
       case "\uD83D\uDC4E": //:thumbsdown:
+	  case "\ud83d\udc97": //:glowing_heart:
+	  case "\u2764": //:heart:
       case "":
         //valid
         break;
       case ":heart_eyes:":
-      case ":love:":
         reaction = "\uD83D\uDE0D";
         break;
+	  case ":glowing_heart:":
+		reaction = "\ud83d\udc97"
+		break;
+	  case ":heart:":
+	  case ":love:":
+	    reaction = "\u2764"
+		break;
       case ":laughing:":
       case ":haha:":
         reaction = "\uD83D\uDE06";
